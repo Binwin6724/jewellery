@@ -51,36 +51,21 @@ function HomePage() {
         </Carousel>
       </div>
       <img
-        style={{ marginTop: "50px", width:"100%" }}
-        src="https://www.josalukkasonline.com/assets/images/home/spl-day-offer.webp"
-        alt="strip-img"
-      />
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          fontSize: "40px",
-        }}
-      >
-        <p
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "5px",
-          }}
-        >
-          Shop By <b>Category</b>
-          <span className="rotate">
-            <img
-              src="https://www.josalukkasonline.com/assets/images/home/right-arrow.svg"
-              alt="rotate"
-              style={{ width: "40px", height: "40px" }}
-            />
-          </span>
-        </p>
-      </div>
-
+    className="img-container"
+    src="https://www.josalukkasonline.com/assets/images/home/spl-day-offer.webp"
+    alt="strip-img"
+  />
+  <div className="center-text">
+    <p className="text-content">
+      Shop By <b>Category</b>
+      <span className="rotate">
+        <img
+          src="https://www.josalukkasonline.com/assets/images/home/right-arrow.svg"
+          alt="rotate"
+        />
+      </span>
+    </p>
+  </div>
 
     </div>
   );

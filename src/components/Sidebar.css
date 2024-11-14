@@ -9,7 +9,8 @@
   color: rgb(70, 70, 70);
   transition: transform 0.3s ease;
   transform: translateX(-100%);
-  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2); /* Box shadow added */
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 50000;
 }
 
 .nav-welcome {
@@ -20,8 +21,8 @@
 }
 
 hr {
-  border: none; /* Removes the default border */
-  height: 1.8px; /* Set the thickness of the line */
+  border: none;
+  height: 1.8px;
   background-color: #ffc107;
 }
 
@@ -34,9 +35,21 @@ hr {
 }
 
 .toggle-btn {
-  position: fixed;
-  top: 70px;
+  position: absolute;
+  top: 80px;
   right: -55px;
+  padding: 10px;
+  background-color: #ffc107;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+}
+
+.toggle-btn-in {
+  position: absolute;
+  top: 80px;
+  right: 30px;
   padding: 10px;
   background-color: #ffc107;
   color: rgb(0, 0, 0);
@@ -56,28 +69,29 @@ hr {
 }
 
 .parent {
-  color: rgb(0, 0, 0);
   text-decoration: none;
-  display: block; /* Ensures the anchor tag takes up full width */
-  padding: 15px; /* Add padding to the anchor tag to cover the full li */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px;
   width: 100%;
-  cursor: pointer; 
+  cursor: pointer;
+  background: repeating-linear-gradient(
+    5deg,
+    var(--gold) 0%,
+    var(--light-shadow) 23%,
+    var(--gold) 31%
+  );
+  background-size: 200%;
+  animation: shine 2s linear infinite;
+  color: #000;
 }
 
-.parent:hover {
-  font-weight: 400;
-  color: #ffc107;
-}
-
+.parent:hover,
 .drop-item:hover {
   font-weight: 400;
   color: #ffc107;
 }
-
-
 
 @keyframes shine {
   0% {
@@ -88,14 +102,42 @@ hr {
   }
 }
 
-.parent {
- color: repeating-linear-gradient(
-    5deg,
-    var(--gold) 0%,
-    var(--light-shadow) 23%,
-    var(--gold) 31%
-  );
-  background-size: 200%;
-  transform: scale(1);
-  animation: shine 2s linear infinite;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 50%;
+  }
+  .toggle-btn {
+    top: 20px;
+    right: -50px;
+    padding: 8px;
+  }
+  .toggle-btn-in {
+    top: 20px;
+    right: 30px;
+    padding: 8px;
+  }
+  .nav-welcome {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100vw;
+  }
+  .toggle-btn {
+    top: 20px;
+    right: -45px;
+    padding: 6px;
+  }
+
+  .toggle-btn-in {
+    top: 20px;
+    right: 30px;
+    padding: 6px;
+  }
+  .nav-welcome {
+    font-size: 1rem;
+  }
 }

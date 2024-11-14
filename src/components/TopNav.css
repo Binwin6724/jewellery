@@ -1,81 +1,220 @@
-/* TopNav.css */
 .topnav {
-    position: fixed;
-    top: 0;
-    width: calc(100%); /* Adjusts width to fit next to the sidebar */
-    height: 60px;
-    background-color: #ffffff;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-  }
-  
-  .topnav .logo {
-    margin-top: 10px;
-    margin-left: 50px;
-  }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
 
-  .search-bar {
-    margin-right: 10px;
+.topnav .logo {
+  margin-top: 10px;
+  margin-left: 50px;
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+}
+
+.animated-text {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(
+    90deg,
+    #8b0000 10%,
+    #a52a2a 20%,
+    #daa520 30%,
+    #ffd700 50%,
+    #daa520 70%,
+    #a52a2a 80%,
+    #8b0000 90%
+  );
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 5s infinite linear;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-right: 40px;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0%;
+  }
+  50% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+
+.search-bar {
+  margin-right: 10px;
+}
+
+.search-bar input {
+  width: 300px;
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  border: 1.5px solid #ffc107;
+  outline: none;
+  padding-right: 30px;
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold" class="bi bi-search" viewBox="0 0 16 16"%3E%3Cpath d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" /%3E%3C/svg%3E')
+    no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+}
+
+.delivery-icon {
+  margin-right: 20px;
+}
+
+.login-signup {
+  color: black;
+  margin: 0 20px;
+  font-size: 14px;
+}
+
+.heart-icon {
+  font-size: 20px;
+  color: gray;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  margin-top: 3px;
+  margin-right: 20px;
+}
+
+.heart-icon:hover {
+  color: red;
+}
+
+.basket-icon {
+  fill: #8b0000;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .topnav {
+    padding: 0 10px;
   }
 
   .search-bar input {
-    width: 300px;
-    padding: 10px;
-    font-size: 12px;
-    border-radius: 20px;
-    border: 1.5px solid #ffc107;
-    outline: none;
-    padding-right: 30px; /* Make room for the icon */
-    background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gold" class="bi bi-search" viewBox="0 0 16 16"%3E%3Cpath d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" /%3E%3C/svg%3E') no-repeat;
-  background-position: right 10px center; /* Align icon inside input */
-  background-size: 16px; /* Set icon size */
+    width: 200px;
   }
-  
+
   .animated-text {
-    font-size: 14px;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-    text-transform: uppercase;
-    background: linear-gradient(90deg, 
-                #8B0000 10%, 
-                #A52A2A 20%, 
-                #DAA520 30%, 
-                #FFD700 50%, 
-                #DAA520 70%, 
-                #A52A2A 80%, 
-                #8B0000 90%);
-    background-size: 300%; /* Make it wider to allow smoother movement */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradientMove 5s infinite linear; /* Slower for smooth effect */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 12px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .topnav {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 10px;
   }
 
-  @keyframes gradientMove {
-    0% {
-      background-position: 0%;
-    }
-    50% {
-      background-position: 100%; /* Gradually moves the gold across */
-    }
-    100% {
-      background-position: 0%; /* Returns smoothly to the start */
-    }
+  .topnav .logo {
+    width: 200px;
+    text-align: center;
+    margin-top: 0px;
+    margin-left: 0px;
+    padding: 0px;
   }
 
-  .heart-icon {
-    font-size: 50px;
-    color: gray; /* Default color */
-    transition: color 0.3s ease; /* Smooth transition */
-    cursor: pointer; /* Changes the cursor to a pointer */
+  .search-bar {
+    width: 300px;
+    margin: 10px;
   }
-  
-  .heart-icon:hover {
-    color: red; /* Color on hover */
+
+  .search-bar input {
+    width: 100%;
+    padding: 8px;
   }
-  
+
+  .animated-text {
+    display: none;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .delivery-icon {
+    display: none;
+  }
+
+  .login-signup {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .topnav {
+    align-items: center;
+    padding: 10px;
+  }
+
+  .topnav .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    text-align: center;
+    margin-top: 0px;
+    margin-left: 0px;
+    padding: 0px;
+  }
+
+  .animated-text {
+    display: none;
+  }
+
+  .nav-center {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .search-bar {
+    width: 200px;
+  }
+
+  .search-bar input {
+    font-size: 10px;
+    width: 100%;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .delivery-icon {
+    display: none;
+  }
+
+  .login-signup {
+    display: none;
+  }
+}
