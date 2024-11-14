@@ -1,0 +1,22 @@
+/* HomePage.css */
+.carousel-container {
+    width: 80vw;
+    margin: auto;
+  }
+
+
+      /* Define the animation */
+      @keyframes rotate-in-place {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+  
+      /* Style the div */
+      .rotate {
+        width: 80px;
+        height: 80px;
+        background-color: #f3f3f3;
+        border-radius: 50%;
+        margin: 100px auto;
+        animation: rotate-in-place 2s linear infinite; /* 2s duration, linear timing, infinite loop */
+      }

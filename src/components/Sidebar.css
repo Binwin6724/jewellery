@@ -1,0 +1,101 @@
+/* Sidebar.css */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #ffffff;
+  color: rgb(70, 70, 70);
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2); /* Box shadow added */
+}
+
+.nav-welcome {
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: black;
+}
+
+hr {
+  border: none; /* Removes the default border */
+  height: 1.8px; /* Set the thickness of the line */
+  background-color: #ffc107;
+}
+
+.nav-welcome b {
+  font-weight: 800;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.toggle-btn {
+  position: fixed;
+  top: 70px;
+  right: -55px;
+  padding: 10px;
+  background-color: #ffc107;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  width: 100%;
+  color: #000;
+}
+
+.parent {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  display: block; /* Ensures the anchor tag takes up full width */
+  padding: 15px; /* Add padding to the anchor tag to cover the full li */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  cursor: pointer; 
+}
+
+.parent:hover {
+  font-weight: 400;
+  color: #ffc107;
+}
+
+.drop-item:hover {
+  font-weight: 400;
+  color: #ffc107;
+}
+
+
+
+@keyframes shine {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.parent {
+ color: repeating-linear-gradient(
+    5deg,
+    var(--gold) 0%,
+    var(--light-shadow) 23%,
+    var(--gold) 31%
+  );
+  background-size: 200%;
+  transform: scale(1);
+  animation: shine 2s linear infinite;
+}
