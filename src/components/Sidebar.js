@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Sidebar.css";
+import "../css/Sidebar.css";
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   // State to manage which dropdown is open

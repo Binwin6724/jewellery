@@ -103,9 +103,9 @@ hr {
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .sidebar {
-    width: 50%;
+    width: 100%;
   }
   .toggle-btn {
     top: 20px;

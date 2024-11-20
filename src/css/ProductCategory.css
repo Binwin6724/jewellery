@@ -1,0 +1,41 @@
+.zoom-container {
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.zoom-image {
+    transition: transform 0.3s ease-in-out;
+}
+
+.zoom-container:hover .zoom-image {
+    transform: scale(1.08);
+}
+
+.underline-effect {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    font-size: 14px;
+    color: black;
+    cursor: pointer;
+}
+
+.underline-effect::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    /* Adjust the space between text and underline */
+    width: 30%;
+    /* Default underline width */
+    height: 2px;
+    /* Thickness of the underline */
+    background-color: orange;
+    /* Underline color */
+    transition: width 0.3s ease-in-out;
+}
+
+.underline-effect:hover::after {
+    width: 100%;
+    /* Full underline on hover */
+}

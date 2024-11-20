@@ -1,6 +1,6 @@
 // TopNav.js
 import React from "react";
-import "./TopNav.css";
+import "../css/TopNav.css";
 
 const TopNav = () => {
   return (
