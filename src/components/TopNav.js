@@ -1,6 +1,7 @@
 // TopNav.js
 import React from "react";
 import "../css/TopNav.css";
+import KiraliLogo from "../assets/kirali-logo.png";
 
 const TopNav = () => {
   return (
@@ -8,7 +9,8 @@ const TopNav = () => {
       <div className="logo">
         <img
           alt="logo-img"
-          src="https://www.josalukkasonline.com/assets/images/header/logo-red.png"
+          src={KiraliLogo}
+          style={{ width: "300px"}}
         />
       </div>
 

@@ -40,7 +40,7 @@ function TrendingOn() {
         <div className='trending-on' style={{ backgroundColor: "#FDF9F3", marginTop:"50px", marginBottom:"50px" }}>
             <div className="center-text">
                 <p className="text-content">
-                    Trending on <b>Jos Alukkas</b>
+                    Trending on <b>Kirali Jewellers</b>
                     <span >
                         <img
                             src="https://www.josalukkasonline.com/assets/images/home/dotted-subhead.svg"

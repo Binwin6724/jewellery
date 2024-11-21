@@ -50,7 +50,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       <nav>
         <div className="nav-welcome">
           Welcome to <br />
-          Jos Alukkas <b>Online</b>
+          Kirali Jewellers <b>Online</b>
         </div>
         <hr />
         <ul>
