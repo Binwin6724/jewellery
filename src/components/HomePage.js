@@ -5,6 +5,8 @@ import ProductCategory from "./ProductCategory";
 import Features from "./Features";
 import CarouselWithText from "./CarouselWithText";
 import TrendingOn from "./TrendingOn";
+import Product from "./Product";
+import Admin from "../admin/components/Admin";
 
 function HomePage() {
   return (
@@ -75,6 +77,8 @@ function HomePage() {
       <TrendingOn />
       <Features />
       <CarouselWithText />
+      <Product />
+      <Admin />
     </div>
   );
 }

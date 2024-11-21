@@ -1,0 +1,38 @@
+.users-container {
+    padding: 20px;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.user-table thead {
+    background-color: #f8f9fa;
+}
+
+.user-table th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    color: #495057;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.user-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dee2e6;
+    color: #212529;
+}
+
+.user-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.user-table tbody tr:last-child td {
+    border-bottom: none;
+}

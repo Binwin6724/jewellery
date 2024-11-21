@@ -1,0 +1,75 @@
+/* Admin container layout */
+.admin-container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  /* Sidebar */
+  .admin-sidebar {
+    width: 250px; /* Fixed width for the sidebar */
+    background-color: #1a1a2e; /* Dark background color */
+    color: #ffffff; /* White text */
+    height: 100vh; /* Full height */
+    position: fixed; /* Fixed to the left side */
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    overflow-y: auto; /* Enable scrolling for long content */
+  }
+  
+  /* Sidebar links */
+  .admin-sidebar ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+  }
+
+  .admin-sidebar .sidebar-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    display: flex; /* Make the entire link clickable */
+    align-items: center;
+  }
+  
+  .admin-sidebar .sidebar-link.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-left: 4px solid #fff;
+  }
+  
+  .admin-sidebar .side-bar-icon {
+    font-size: 40px; /* Adjust icon size */
+    margin: 10px;
+  }
+
+  .admin-sidebar li {
+    margin: 15px 0; /* Add space between items */
+    font-size: 16px; /* Text size */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+    padding: 10px;
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  .admin-sidebar li:hover {
+    background-color: #16213e; /* Highlight color on hover */
+    color: #00aaff; /* Text highlight color */
+  }
+  
+  .admin-sidebar a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    display: block; /* Make the entire link clickable */
+  }
+  
+  /* Content area */
+  .admin-content {
+    flex: 1;
+    margin-left: 250px; /* Add margin to account for sidebar width */
+    padding: 20px; /* Add padding for content */
+    background-color: #f4f4f4; /* Light background color for content */
+    overflow-y: auto; /* Enable scrolling for long content */
+    color: #000; /* Ensure text color is visible */
+  }
