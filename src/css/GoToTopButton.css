@@ -1,0 +1,56 @@
+/* Button Style */
+.go-top-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #ffc107;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 1000;
+  }
+  
+  /* Show Button When Visible */
+  .go-top-button.show {
+    opacity: 1;
+    visibility: visible;
+    animation: breathing 2s infinite;
+  }
+  
+  /* Hover Animation */
+  .go-top-button:hover {
+    background-color: #ffa000;
+    transform: scale(1.1);
+  }
+  
+  /* Arrow Icon */
+  .go-top-button span {
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Breathing Animation */
+  @keyframes breathing {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+      transform: scale(1.1);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+  }
+  

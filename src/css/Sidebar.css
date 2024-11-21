@@ -44,6 +44,7 @@ hr {
   cursor: pointer;
   border: none;
   border-radius: 50%;
+  animation: breathing 2s infinite;
 }
 
 .toggle-btn-in {
@@ -56,6 +57,7 @@ hr {
   cursor: pointer;
   border: none;
   border-radius: 50%;
+  animation: breathing 2s infinite;
 }
 
 .sidebar nav ul {
